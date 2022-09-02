@@ -13,8 +13,7 @@ import us.anant.examples.socialgraph.SocialGraph
 import collection.mutable.Stack
 import org.scalatest.flatspec.AnyFlatSpec
 
-//class SocialGraphExampleDse6_8_23Test extends AnyFunSuite with SharedSparkContext {
-class SocialGraphExampleDse6_8_23Test extends AnyFunSuite with BeforeAndAfterAll {
+class SocialGraphExampleTest extends AnyFunSuite with BeforeAndAfterAll {
   val usingOssSpark : Boolean = false
   val dseVersion : String = "6.8.23"
 
@@ -56,14 +55,3 @@ class SocialGraphExampleDse6_8_23Test extends AnyFunSuite with BeforeAndAfterAll
     spark.stop()
   }
 }
-
-// class SocialGraphExampleTest extends AnyFunSuite with SharedSparkContext {
-//   // https://github.com/holdenk/spark-testing-base/wiki/SharedSparkContext
-// 
-//   test("test initializing spark context") {
-//     val list = List(1, 2, 3, 4)
-//     val rdd = sc.parallelize(list)
-// 
-//     assert(rdd.count === list.length)
-//   }
-// }

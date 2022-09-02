@@ -1,0 +1,37 @@
+version: '3'
+services:
+  dse:
+    image: datastax/dse-server:${DSE_VERSION:-6.7.17}
+    command: [ -g -k ]
+    ports:
+      - "9042:9042"
+      - "8983:8983"
+      - "8182:8182"
+      - "4040:4040"
+      - "4041:4041"
+    environment:
+      DS_LICENSE: accept
+    cap_add:
+      - IPC_LOCK
+    ulimits:
+      memlock: -1
+    networks:
+      - graph
+    container_name: dse
+
+  studio:
+    image: datastax/dse-studio:6.8.9
+    ports:
+      - "9091:9091"
+    depends_on:
+      - dse
+    environment:
+      DS_LICENSE: accept
+    depends_on:
+      - dse
+    networks:
+      - graph
+
+networks:
+  graph:
+    external: true

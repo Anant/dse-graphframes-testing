@@ -23,15 +23,7 @@ docker stop dse && docker rm dse
 ```
 
 ## Using DSE Spark
-### Build and run
+### Build and run tests
 ```
-# one of 6.7.7, 6.7.17, or 6.8.23
-DSE_VERSION=6.7.17
-./scripts/dse/build-and-submit.sh $DSE_VERSION
+./scripts/mvn/test.dse-spark.6.8.23.sh
 ```
-
-### Just do the spark submit
-```
-./scripts/dse/spark-submit.sh $DSE_VERSION
-```
-

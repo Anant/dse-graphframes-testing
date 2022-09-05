@@ -9,7 +9,7 @@ docker network create graph
 
 # pull/start containers for the right dse version
 # one of 6.7.7, 6.7.17, or another of the supported versions listed below
-DSE_VERSION=6.7.17
+DSE_VERSION=6.8.23
 ./scripts/docker/compose-up.${DSE_VERSION}.sh
 
 # wait until dse is up...

@@ -26,8 +26,7 @@ cd $project_root  && \
   -Ddse.version=$DSE_VERSION \
   -Dunified.driver.version=$UNIFIED_DRIVER_VERSION \
   -Dtinkerpop.version=$TINKERPOP_VERSION \
-  -Dtest=SocialGraphExampleDse6_8_23Test \
-  test 
+  clean test 
 #dependency:tree
 
 

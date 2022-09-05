@@ -14,6 +14,7 @@ export DSE_VERSION=6.7.17
 #export UNIFIED_DRIVER_VERSION=4.14.1
 #export TINKERPOP_VERSION=3.5.3
 export UNIFIED_DRIVER_VERSION=4.14.0
+
 export TINKERPOP_VERSION=3.4.10
 # https://github.com/datastax/release-notes/blob/master/DSE_6.8_Release_Notes.md#components-versions-for-dse-6823
 export SPARK_VERSION=2.4.0
@@ -26,8 +27,7 @@ cd $project_root  && \
   -Ddse.version=$DSE_VERSION \
   -Dunified.driver.version=$UNIFIED_DRIVER_VERSION \
   -Dtinkerpop.version=$TINKERPOP_VERSION \
-  -Dtest=SocialGraphExampleDse6_8_23Test \
-  test 
+  clean test 
 #dependency:tree
 
 
